@@ -1,13 +1,14 @@
 import React from 'react';
-import './App.css';
 import { Noise } from './components/Noise';
-import packageJson from '../package.json';
+import { Footer } from './components/Footer';
 
 function App() {
     return (
-        <div>
-            <h1>Welcome to white noise! v{packageJson.version}</h1>
-            <Noise name={'River'} sound={'/River.mp3'} />
+        <div className="h-full">
+            <main className="h-full px-5 pt-2.5">
+                <Noise name={'River'} sound={'/River.mp3'}/>
+            </main>
+            <Footer/>
         </div>
     );
 }

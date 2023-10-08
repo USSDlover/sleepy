@@ -82,13 +82,13 @@ export function Noise({ name, sound }) {
     }
 
     return (
-        <div className="flex flex-col gap-4 py-3 px-2 max-w-sm border-b-2 shadow">
-            <h3 className="text-2xl font-bold">{name}</h3>
-            <progress max={audio.duration} value={currentTime} />
-            <div className="self-end flex gap-2 items-center">
+        <div className="flex flex-col relative gap-4 py-3 px-2 max-w-sm border-b-2 shadow bg-blue-50 h-28">
+            <p className="z-10 mix-blend-difference text-amber-100">{name}</p>
+            <div className="z-10 self-end flex gap-2 items-center">
                 <PlayButton clickHandler={handlePlaying} playing={playing} />
                 <RepeatButton clickHandler={handleAutoRepeat} autoRepeat={loop} />
             </div>
+            <progress className="absolute left-0 top-0 w-full h-full opacity-15 z-0" max={audio.duration} value={currentTime} />
         </div>
     )
 }
