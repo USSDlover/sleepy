@@ -7,7 +7,7 @@ function App() {
     return (
         <div>
             <h1>Welcome to white noise! v{packageJson.version}</h1>
-            <Noise name={'River'} sound={'/River-sounds.mp3'} />
+            <Noise name={'River'} sound={'/River.mp3'} />
         </div>
     );
 }
